@@ -1,0 +1,2 @@
+rootProject.name = "Crypto App"
+include ':app'
