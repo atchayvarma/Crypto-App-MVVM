@@ -5,12 +5,15 @@ import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -38,12 +41,12 @@ class MainActivity : AppCompatActivity() {
 
                         setContent {
 
-
-                            Surface(color = MaterialTheme.colors.background) {
-
-                                DisplayCryptos(cryptoResponseData = cryptoResponseData)
-
+                            BoxWithConstraints(
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                            DisplayCryptos(cryptoResponseData = cryptoResponseData)
                             }
+
 
                         }
 
